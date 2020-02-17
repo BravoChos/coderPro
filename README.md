@@ -1,2 +1,2 @@
 # Code Interview
-Problems from leetcode or geeks for geeks
+Problems from Leetcode or GeeksForGeeks
