@@ -1,3 +1,3 @@
-class MaxStack(object):
-  def __init__(self):
-    # Fill this in.
+class Solution:
+  def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool: 
+  # Fill this in.

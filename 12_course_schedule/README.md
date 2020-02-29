@@ -1,26 +1,27 @@
-# Maximum In a Stack
+# Course Schedule
 
-Design a max stack that supports push, pop, top, peekMax and popMax.
+There are a total of n courses you have to take, labeled from 0 to n-1.
 
-1. push(x) -- Push element x onto stack.
-2. pop() -- Remove the element on top of the stack and return it.
-3. top() -- Get the element on the top.
-4. peekMax() -- Retrieve the maximum element in the stack.
-5. popMax() -- Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
 
-**Example:**
+Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+
+**Example 1:**
 ````
-MaxStack stack = new MaxStack();
-stack.push(5); 
-stack.push(1);
-stack.push(5);
-stack.top(); -> 5
-stack.popMax(); -> 5
-stack.top(); -> 1
-stack.peekMax(); -> 5
-stack.pop(); -> 1
-stack.top(); -> 5
+Input: 2, [[1,0]] 
+Output: true
+Explanation: There are a total of 2 courses to take. 
+             To take course 1 you should have finished course 0. So it is possible.
+````
+**Example 2:**
+````
+Input: 2, [[1,0],[0,1]]
+Output: false
+Explanation: There are a total of 2 courses to take. 
+             To take course 1 you should have finished course 0, and to take course 0 you should
+             also have finished course 1. So it is impossible.
 ````
 
 **Note:**  
--1e7 <= x <= 1e7 Number of operations won't exceed 10000. The last four operations won't be called when stack is empty.
+1. The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
+2. You may assume that there are no duplicate edges in the input prerequisites.
