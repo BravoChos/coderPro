@@ -15,4 +15,5 @@ class Solution:
       res.append(heapq.heappop(heap)[1])
     return res
 
-Solution.topKFrequent([1,1,1,2,2,3],2)
+t = Solution().topKFrequent( [1,1,1,2,2,3],2)
+print(t)
